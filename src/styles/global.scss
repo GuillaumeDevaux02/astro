@@ -1,0 +1,27 @@
+<style lang ="scss">
+
+// Variable pour la couleur de l'arrière-plan
+$bg-color-default: #d35151;
+$bg-color-hover: #111189;
+$bg-color-mobile: #ffcc00;
+
+// Mixin pour la modification de l'arrière-plan
+@mixin change-bg-color($color) {
+  background-color: $color;
+}
+
+// Par défaut, couleur de fond
+body {
+  @include change-bg-color($bg-color-default);
+  
+  // Modifier la couleur de fond en fonction de l'état de survol
+  &:hover {
+    @include change-bg-color($bg-color-hover);
+  }
+
+  // Modification de la couleur de fond pour les petits écrans (mobile)
+  @media (max-width: 768px) {
+    @include change-bg-color($bg-color-mobile);
+  }
+}
+
