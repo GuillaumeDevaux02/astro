@@ -1,27 +1,27 @@
-<style lang ="scss">
+// Définition d'une variable pour la couleur de fond
+$background-color: #1d78d3;
 
-// Variable pour la couleur de l'arrière-plan
-$bg-color-default: #d35151;
-$bg-color-hover: #111189;
-$bg-color-mobile: #ffcc00;
-
-// Mixin pour la modification de l'arrière-plan
-@mixin change-bg-color($color) {
-  background-color: $color;
-}
-
-// Par défaut, couleur de fond
+// Appliquer l'arrière-plan à tout le corps de la page
 body {
-  @include change-bg-color($bg-color-default);
-  
-  // Modifier la couleur de fond en fonction de l'état de survol
-  &:hover {
-    @include change-bg-color($bg-color-hover);
-  }
+    background-color: $background-color;
+    font-family: Arial, sans-serif;
+    color: #f3efef;
+}
+// Variable pour la largeur et la hauteur de l'image
+$image-width: 500px;
+$image-height: 300px;
 
-  // Modification de la couleur de fond pour les petits écrans (mobile)
-  @media (max-width: 768px) {
-    @include change-bg-color($bg-color-mobile);
-  }
+// Conteneur pour centrer l'image
+.container {
+    display: flex;           // Utilisation de Flexbox
+    justify-content: left; // Centrer horizontalement
+    align-items: letf;     // Centrer verticalement
+    height: 100vh;           // Le conteneur prend toute la hauteur de la fenêtre
 }
 
+// Style pour l'image
+img {
+    width: $image-width;
+    height: $image-height;
+    object-fit: cover;       // Ajuste l'image pour qu'elle remplisse bien son cadre
+}
