@@ -7,21 +7,23 @@ body {
     font-family: Arial, sans-serif;
     color: #f3efef;
 }
-// Variable pour la largeur et la hauteur de l'image
+
+// Variable pour la largeur et la hauteur des images
 $image-width: 500px;
 $image-height: 300px;
 
-// Conteneur pour centrer l'image
+// Conteneur pour afficher les images côte à côte
 .container {
-    display: flex;           // Utilisation de Flexbox
-    justify-content: left; // Centrer horizontalement
-    align-items: letf;     // Centrer verticalement
+    display: flex;           // Utilisation de Flexbox pour aligner les images
+    justify-content: center; // Centrer le groupe d'images horizontalement
+    align-items: center;     // Centrer verticalement
+    gap: 100px;               // Espacement entre les images (tu peux ajuster)
     height: 100vh;           // Le conteneur prend toute la hauteur de la fenêtre
 }
 
-// Style pour l'image
+// Style pour les images
 img {
     width: $image-width;
     height: $image-height;
-    object-fit: cover;       // Ajuste l'image pour qu'elle remplisse bien son cadre
+    object-fit: cover;       // Ajuste les images pour qu'elles remplissent bien leur cadre
 }
